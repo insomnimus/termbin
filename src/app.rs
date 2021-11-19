@@ -1,15 +1,13 @@
 use clap::{
 	crate_version,
 	App,
-	AppSettings,
 	Arg,
 };
 
 pub fn new() -> App<'static> {
 	let app = App::new("termbin")
 		.version(crate_version!())
-		.about("Create a termbin from the command line.")
-		.setting(AppSettings::UnifiedHelpMessage);
+		.about("Create a termbin from the command line.");
 
 	let clip = Arg::new("clip")
 		.short('c')
